@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -69,11 +70,20 @@ function NavBar(props) {
             MUI
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
+            {/* {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff' }}>
                 {item}
               </Button>
-            ))}
+            ))} */}
+            <Link to="/">
+              <Button sx={{ color: '#fff' }}>Home</Button>
+            </Link>
+            <Link to="create">
+              <Button sx={{ color: '#fff' }}>Create Prep</Button>
+            </Link>
+            <Link to="result">
+              <Button sx={{ color: '#fff' }}>Result</Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

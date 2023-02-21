@@ -1,11 +1,12 @@
 import { Typography } from '@material-ui/core';
+import { Box } from '@mui/system';
 
 const HomePage = () => {
   return (
     <div>
-      <p>
-        Welcome to my website! This is the default paragraph on the homepage.
-      </p>
+      <Box sx={{ marginTop: 20 }}>
+        <Typography variant="h4">Home Page</Typography>
+      </Box>
     </div>
   );
 };
